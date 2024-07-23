@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt.br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style2.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+
+    <div class="name tex-center">
+        <h1 class="title">FORMULARIO</h1>
+    </div>
+    <form>
+        <tr>
+
+            <lu><a href="index.html">INICIAL</a></lu>
+            <lu><a href="index5.html">FAÇA SEU CADASTRO</a></lu>
+
+        </tr>
+    </form>
+                <div>
+                    <input type="tex" placeholder="Dijite seu nome" class="input required" oninput="nameValidade">
+                </div>
+
+                <div>
+                    <input type="tex" placeholder="Dijite seu melhor email" class="input required">
+                  
+                </div>
+                <div>
+                    <input type="tex" placeholder="Senha" class="input required">
+                   
+                </div>
+                <div>
+                    <input type="tex" placeholder="Repita a senha" class="input required">
+                   
+                </div>
+                <textarea class="input" name="descriçao" id="descriçao" cols="25" rows="10"
+                    placeholder="Fale um pouco sobre você..."></textarea>
+                <p>Sexo:</p>
+                <div class="box-select">
+                    <input type="radio" id="m" value="m" name="Sexo">
+                    <label for="m">Masculino</label>
+                </div>
+                <div>
+                    <input type="radio" id="f" value="f" name="Sexo">
+                    <label for="m">Feminino</label>
+                </div>
+                <div>
+                    <input type="radio" id="o" value="o" name="Sexo">
+                    <label for="o">outros</label>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+    </form>
+    </div>
+</body>
+<script>
+    const form = document.getElementById('form');
+    const campos = document.querySelectorAll('.required');
+    const span = document.querySelectorAll('.span-required');
+    const emailReges = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/:
+
+    function setError(index) {
+        campo[index].style.border = '2px solid #e63636';
+        span[index].style.display = 'back';
+    }
+    function setError(index) {
+        campo[index].style.border = '';
+        span[index].style.display = 'name';
+    }
+
+    function nameValidade() {
+        if (campos[0].value.length < 3) {
+            setError(0);
+        }
+        else {
+            removeError(0);
+        }
+    }
+    function emailValidate() {
+        if (emailRegex.text(campos[1].value)) {
+            removeError('1');
+        }
+        else {
+            removeError('1')
+        }
+    }
+</script>
+
+</html>
+
+</body>
+
+</html>
